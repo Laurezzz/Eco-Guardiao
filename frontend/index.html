@@ -5,29 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
 </head>
 <body>
 
-<section>
-    <img src="boasvindas.png" alt="" id="welcome-png">
-
-        <div class="text">
-        <p>Bem-vindo ao Eco-Guardião! 
-            Nosso espaço foi criado para informar, inspirar e conscientizar sobre a importância da preservação ambiental e da proteção das espécies. Aqui, você encontra conteúdos      
-            claros e acessíveis sobre educação ambiental, dicas práticas e ações que todos podemos adotar para cuidar do planeta. Juntos, podemos ser guardiões de um futuro mais 
-            verde e sustentável.</p>
-        </div>
-
-        <button id="open-modal-1">LOGIN</button>
-        <button id="open-modal-2">LOGON</button> 
+<div class="container">
+    <div class="texto">
+        <img src="boasvindas.png" alt="" id="boasVindas-png">
+        <p>
+            Bem-vindo ao Eco-Guardião! Nosso espaço foi criado para informar, inspirar e conscientizar 
+            sobre a importância da preservação ambiental e da proteção das espécies. Aqui, você encontra conteúdos claros 
+            e acessíveis sobre educação ambiental, dicas práticas e ações que todos podemos adotar para cuidar do planeta. 
+            Juntos, podemos ser guardiões de um futuro mais verde e sustentável.
+        </p>
         
+            <button class="abrirModal">CRIE SUA CONTA</button>
+            <div id="fundoModal" class="hide"></div>
+            <div id="modal" class="hide">
+                <button id="fecharModal">X</button>
+                <form action="">
+                    <h1>Crie sua conta!</h1>
+                    <p>Já tem uma conta? Entre aqui</p>
+                    <input type="email" >
+                    <input type="password">
+                </form>
+            </div>
 
-
-    <div class="logoWelcome-background">
-        <img src="patagiga.png" alt="" class="logoWelcome-png">
+            <button class="abrirModal2">ENTRAR</button>
+            <div id="fundoModal2" class="hide"></div>
+            <div id="modal2" class="hide">
+                <button id="fecharModal2">X</button>
+                <form action="">
+                    <h1>Entre na sua conta!</h1> 
+                    <p>Ainda não tem uma? Crie aqui!</p>
+                    <input type="email">
+                    <input type="password">
+                </form> 
+            </div>
+        
     </div>
 
-</section>
+    <div class="logo">
+        <img src="patagiga.png" alt="Logo Eco Guardião" class="logoBemVindo-png"> 
     
+    </div>
+
+</div>
+
+
+
 </body>
 </html>

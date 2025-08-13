@@ -1,32 +1,99 @@
-* {
-    padding: 0;
-    margin: 0;
+body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #fbe6dc;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between; 
+        align-items: center; 
+        min-height: 100vh;
+        padding: 0 50px;
+    }
+
+    .texto {
+        max-width: 50%;
+    }
+
+    .texto p {
+        color: #5e2c20;
+        font-size: 16px;
+        line-height: 1.6;
+        text-align: justify;
+    }
+
+    button {
+        background-color: #8bb174;
+        color: #5e2c20;
+        border: none;
+        padding: 10px 20px;
+        margin-right: 10px;
+        border-radius: 15px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.4s;
+    }
+
+    button:hover {
+        background-color: #6f9658;
+    }
+
+    .logoBemVindo-png{
+        height: 90vh;
+        text-align: center;
+        position: fixed;
+        right: 15vw;
+        top: 60%;
+        transform: translateY(-50%); 
+    }
+
+/*--------------------MODAL-------------------------*/
+
+#fundoModal, #modal,
+#fundoModal2, #modal2{
+    transition: 0.5s;
+    opacity: 1;
+    pointer-events: all;
 }
 
-#welcome-png{
-    height: 10vh;
+#fundoModal, #fundoModal2{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.556);
+    z-index: 5;
+    transition: 0.5s;
 }
 
-.logoWelcome-background{
-    background-color: brown;
-    height: 80vh;
-    width: 50vw;
+#modal, #modal2{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 
-    display: flex;
-    justify-content: center;
-    justify-self: end;
+    z-index: 10;
+
+    background-color: #fbe6dc;
+
+    width: 600px;
+    max-width: 90%;
+
+    padding: 45px;
+    border-radius: 15px;
+    transition: 0.5s;
 }
 
-.text{
-    background-color: aqua;
-    width: 40vw;
-
-    
-
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: large;
+#modal.hide, #fundoModal.hide,
+#modal2.hide, #fundoModal2.hide{
+    opacity: 0;
+    pointer-events: none;
 }
 
-#welcome-png{
-    background-color: aqua;
+#modal.hide, #modal2.hide{
+    top: 0;
 }
