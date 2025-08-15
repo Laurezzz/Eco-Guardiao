@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Eco-Guardião</title>
     <link rel="stylesheet" href="style.css">
-    <script src="main.js" defer></script>
 </head>
 <body>
 
@@ -19,40 +18,40 @@
             Juntos, podemos ser guardiões de um futuro mais verde e sustentável.
         </p>
         
-            <button class="abrirModal">CRIE SUA CONTA</button>
-            <div id="fundoModal" class="hide"></div>
-            <div id="modal" class="hide">
-                <button id="fecharModal">X</button>
-                <form action="">
-                    <h1>Crie sua conta!</h1>
-                    <p>Já tem uma conta? Entre aqui</p>
-                    <input type="email" >
-                    <input type="password">
-                </form>
-            </div>
+        <button class="abrirModal">CRIE SUA CONTA</button>
+        <div id="fundoModal" class="hide"></div>
+        <div id="modal" class="hide">
+            <button id="fecharModal">X</button>
+            <form id="formCadastro">
+                <h1>Crie sua conta!</h1>
+                <p>Já tem uma conta? <a href="#" class="alternarModal">Entre aqui</a></p>
+                <input type="email" id="cadastroEmail" placeholder="Seu e-mail" required>
+                <input type="password" id="cadastroSenha" placeholder="Crie uma senha" required>
+                <input type="password" id="cadastroConfirmarSenha" placeholder="Confirme sua senha" required>
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
 
-            <button class="abrirModal2">ENTRAR</button>
-            <div id="fundoModal2" class="hide"></div>
-            <div id="modal2" class="hide">
-                <button id="fecharModal2">X</button>
-                <form action="">
-                    <h1>Entre na sua conta!</h1> 
-                    <p>Ainda não tem uma? Crie aqui!</p>
-                    <input type="email">
-                    <input type="password">
-                </form> 
-            </div>
-        
+        <button class="abrirModal2">ENTRAR</button>
+        <div id="fundoModal2" class="hide"></div>
+        <div id="modal2" class="hide">
+            <button id="fecharModal2">X</button>
+            <form id="formLogin">
+                <h1>Entre na sua conta!</h1> 
+                <p>Ainda não tem uma? <a href="#" class="alternarModal">Crie aqui!</a></p>
+                <input type="email" id="loginEmail" placeholder="Seu e-mail" required>
+                <input type="password" id="loginSenha" placeholder="Sua senha" required>
+                <button type="submit">Entrar</button>
+            </form> 
+        </div>
     </div>
 
     <div class="logo">
         <img src="patagiga.png" alt="Logo Eco Guardião" class="logoBemVindo-png"> 
-    
     </div>
-
 </div>
 
 
-
+<script src="/frontend/script.js"></script>
 </body>
 </html>

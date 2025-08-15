@@ -1,99 +1,151 @@
 body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: #fbe6dc;
-    }
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fbe6dc;
+}
 
-    .container {
-        display: flex;
-        justify-content: space-between; 
-        align-items: center; 
-        min-height: 100vh;
-        padding: 0 50px;
-    }
+.container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    min-height: 100vh;
+    padding: 0 50px;
+}
 
-    .texto {
-        max-width: 50%;
-    }
+.texto {
+    max-width: 50%;
+}
 
-    .texto p {
-        color: #5e2c20;
-        font-size: 16px;
-        line-height: 1.6;
-        text-align: justify;
-    }
+.texto p {
+    color: #5e2c20;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+}
 
-    button {
-        background-color: #8bb174;
-        color: #5e2c20;
-        border: none;
-        padding: 10px 20px;
-        margin-right: 10px;
-        border-radius: 15px;
-        font-weight: bold;
-        cursor: pointer;
-        transition: 0.4s;
-    }
+button {
+    background-color: #8bb174;
+    color: #5e2c20;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s;
+}
 
-    button:hover {
-        background-color: #6f9658;
-    }
+button:hover {
+    background-color: #6f9658;
+}
 
-    .logoBemVindo-png{
-        height: 90vh;
-        text-align: center;
-        position: fixed;
-        right: 15vw;
-        top: 60%;
-        transform: translateY(-50%); 
-    }
+.logoBemVindo-png {
+    height: 90vh;
+    text-align: center;
+    position: fixed;
+    right: 15vw;
+    top: 60%;
+    transform: translateY(-50%); 
+}
 
-/*--------------------MODAL-------------------------*/
+/* --------------------- MODAIS -------------------- */
+#fundoModal, #fundoModal2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
 
-#fundoModal, #modal,
-#fundoModal2, #modal2{
-    transition: 0.5s;
+#modal, #modal2 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    background-color: #fbe6dc;
+    padding: 30px;
+    border-radius: 15px;
+    z-index: 101;
+    width: 400px;
+    max-width: 90%;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#modal.show, #modal2.show {
+    opacity: 1;
+    pointer-events: all;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+#fundoModal.show, #fundoModal2.show {
     opacity: 1;
     pointer-events: all;
 }
 
-#fundoModal, #fundoModal2{
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    background-color: rgba(0, 0, 0, 0.556);
-    z-index: 5;
-    transition: 0.5s;
+#fecharModal, #fecharModal2 {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #5e2c20;
 }
 
-#modal, #modal2{
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-
-    z-index: 10;
-
-    background-color: #fbe6dc;
-
-    width: 600px;
-    max-width: 90%;
-
-    padding: 45px;
-    border-radius: 15px;
-    transition: 0.5s;
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-#modal.hide, #fundoModal.hide,
-#modal2.hide, #fundoModal2.hide{
-    opacity: 0;
-    pointer-events: none;
+form h1 {
+    color: #5e2c20;
+    margin-bottom: 10px;
 }
 
-#modal.hide, #modal2.hide{
-    top: 0;
+form p {
+    color: #5e2c20;
+    margin-bottom: 20px;
+}
+
+form input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+form button[type="submit"] {
+    padding: 12px;
+    background-color: #8bb174;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+form a {
+    color: #8bb174;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+form a:hover {
+    text-decoration: underline;
+}
+
+.hide {
+    display: none;
 }
